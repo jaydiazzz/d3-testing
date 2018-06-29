@@ -38,7 +38,7 @@ var svg = d3.select( '#chart' )
             .append( 'svg' )
             .attr( 'class', 'pie' )
             .attr( 'width', width )
-            .attr( 'height', height );
+			.attr( 'height', height );
 
 var g = svg.append( 'g' )
 		   .attr( 'transform', `translate(${width / 2},${height / 2})` );
@@ -154,10 +154,14 @@ const radialProgress = () => {
 
 	const container = g.append( 'path' )
 					   .attr( 'd', circle.endAngle( endAngle ) )
+					   .attr( 'stroke', 'white' )
+					   .attr( 'stroke-width', '3px' )
 					   .attr( 'fill', '#373737' );
 
 	const path = g.append( 'path' )
 				  .attr( 'fill', 'skyblue' )
+				  .attr( 'stroke', 'white' )
+				  .attr( 'stroke-width', '3px' )
 				  .attr( 'd', circle.endAngle( endAngle * currentVal ) );
 
 	const text = g.append( 'text' )

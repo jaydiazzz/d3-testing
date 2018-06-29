@@ -1,9 +1,21 @@
 extends LAYOUT.pug
 
 block customCSS
+	style.
+		.pie{
+			transform: translate(-50%, 0);
+			position:relative;
+			left:50%;
+		}
+
+		#chart h1{
+			margin-top:0;
+			padding:2%;
+		}
 
 block content
-	#chart(style="background-color:#373737")
+	#chart(style="background-color:#373737;")
+		h1(style="text-align:center;color:white;") Simpson Character Data
 
 	#radial
 
